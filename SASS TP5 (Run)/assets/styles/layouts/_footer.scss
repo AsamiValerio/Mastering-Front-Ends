@@ -1,0 +1,47 @@
+footer {
+  padding: 50px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 80%;
+    background: $grey2;
+    position: absolute;
+    top: 0;
+    @include centerX;
+  }
+
+  ul {
+    display: flex;
+    width: 66%;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @media screen and (max-width:450px)  {
+      width: 84%;
+    }
+  
+
+    a {
+      border-radius: 50px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid $grey2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &:active {
+        color: $blue1;
+        border: 1px solid $blue1;
+      }
+    }
+  }
+}

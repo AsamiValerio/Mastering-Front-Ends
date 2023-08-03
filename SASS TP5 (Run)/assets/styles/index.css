@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(/assets/fonts/Roboto-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: rgb(250, 250, 250);
+  font-family: Roboto, sans-serif;
+  color: rgb(10, 10, 10);
+}
+
+.section-1,
+.section-2,
+.contact {
+  box-shadow: inset 0 1px 0 rgba(168, 168, 168, 0.404);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  gap: 28px;
+}
+.container div h1 {
+  font-size: 4.5rem;
+  font-weight: 100;
+}
+.container div h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.container div p {
+  line-height: 38px;
+  color: rgba(105, 105, 105, 0.897);
+}
+
+.button {
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(168, 168, 168, 0.404);
+  color: rgba(105, 105, 105, 0.897);
+  padding: 12px 24px;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:active {
+  border: 2px solid rgba(121, 213, 255, 0.932);
+  color: rgba(121, 213, 255, 0.932);
+}
+
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 990px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+  }
+}
+header .img-banner {
+  background: url(/assets/img/banner.webp) right/cover;
+}
+
+.section-1 {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+@media screen and (max-width: 720px) {
+  .section-1 {
+    display: block;
+    height: auto;
+    padding: 20px 0;
+  }
+}
+.section-1 .img {
+  background: url(/assets/img/img-left.webp) center/cover;
+}
+
+.section-2 {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+@media screen and (max-width: 720px) {
+  .section-2 {
+    display: block;
+    height: auto;
+    padding: 20px 0;
+  }
+}
+.section-2 .img {
+  background: url(/assets/img/img-right.webp) center/cover;
+}
+
+.contact {
+  text-align: center;
+  padding: 60px 0;
+}
+.contact h3 {
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+.contact form .form-grid {
+  display: grid;
+  grid-template-areas: "i1 i2" "ta ta";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px 224px;
+  gap: 10px;
+  width: 85%;
+  max-width: 600px;
+  margin: 30px auto;
+}
+.contact form .form-grid label {
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.contact form .form-grid #name {
+  grid-area: i1;
+}
+.contact form .form-grid #email {
+  grid-area: i2;
+}
+.contact form .form-grid .textarea {
+  grid-area: ta;
+}
+.contact form .form-grid input[type=text],
+.contact form .form-grid textarea {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  margin: 20px 0 35px;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(168, 168, 168, 0.404);
+  transition: 0.2s;
+}
+.contact form .form-grid input[type=text]:focus,
+.contact form .form-grid textarea:focus {
+  border: 2px solid rgba(121, 213, 255, 0.932);
+}
+.contact form .form-grid textarea {
+  resize: none;
+  height: 180px;
+}
+
+footer {
+  padding: 50px 0;
+  position: relative;
+}
+footer::before {
+  content: "";
+  height: 1px;
+  width: 80%;
+  background: rgba(168, 168, 168, 0.404);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer ul {
+  display: flex;
+  width: 66%;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+@media screen and (max-width: 450px) {
+  footer ul {
+    width: 84%;
+  }
+}
+footer ul a {
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(168, 168, 168, 0.404);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+footer ul a:hover {
+  transform: scale(1.2);
+}
+footer ul a:active {
+  color: rgba(121, 213, 255, 0.932);
+  border: 1px solid rgba(121, 213, 255, 0.932);
+}/*# sourceMappingURL=index.css.map */

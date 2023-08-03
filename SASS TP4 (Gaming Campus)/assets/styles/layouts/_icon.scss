@@ -1,0 +1,70 @@
+.icon-part {
+  background: $black1;
+  color: $white1;
+  
+  .icon-part-container {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 6rem 0;
+    justify-items: center;
+
+    @media screen and (max-width:1050px) {
+      @include flexColumn;
+      align-items: center;
+      gap: 40px;
+      padding: 1rem 0 3rem;
+    }
+
+    .list-icon-part {
+      width: 75%;
+      @include flexColumn;
+      gap: 30px;
+      align-items: center;    
+
+      h3 {
+        text-transform: uppercase;
+        margin-bottom: -20px;
+        letter-spacing: 1px;
+        
+
+        @media screen and (max-width:1217px) {
+          width: 300px;
+        }
+
+        @media screen and (max-width:350px) {
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        line-height: 20px;
+
+        @media screen and (max-width:1128px) {
+          height: 80px;
+        }
+
+        @media screen and (max-width:1050px) {
+          height: 100%;
+          width: 50%;
+        }
+
+        @media screen and (max-width:750px) {
+          width: 70%;
+        }
+
+        @media screen and (max-width:540px) {
+          width: 100%;
+        }
+      }
+
+      button {
+        font-size: 0.8rem;
+        width: 190px;
+      }
+    }
+  }
+}

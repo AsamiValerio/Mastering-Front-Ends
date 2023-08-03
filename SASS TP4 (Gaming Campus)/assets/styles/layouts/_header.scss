@@ -1,0 +1,52 @@
+header {
+  background: url(/assets/img/bg.webp) center/cover fixed;
+  height: 94vh;
+
+  @media screen and (max-width:850px) {
+    height: 100vh;
+  }
+
+  .main-header {
+    @include centerChild;
+    flex-direction: column;
+    height: 100%;
+    gap: 33px;
+
+    img {
+      user-select: none;
+      
+      @media screen and (max-width:620px) {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      color: $white1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      max-width: 90%;
+
+      @media screen and (max-width:550px) {
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-width:440px) {
+        font-size: 1rem;
+      }
+    }
+
+    button {
+      
+      @media screen and (max-width:440px) {
+        font-size: 0.8rem;
+      }
+
+      @media screen and (max-width:315px) {
+        font-size: 0.7rem;
+        padding: 8px 10px;
+      }
+  
+    }
+  }
+}

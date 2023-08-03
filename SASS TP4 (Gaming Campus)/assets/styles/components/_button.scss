@@ -1,0 +1,17 @@
+button {
+  background: transparent;
+  outline: none;
+  color: $white1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid $white1;
+  font-weight: 600;
+
+  &:active {
+    color: $grey1;
+    border: 1px solid $grey1;
+  }
+}

@@ -1,0 +1,138 @@
+.news-part {
+  background: $white2;
+  padding: 40px 0;
+
+  .header-news {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 50px;
+    max-width: 1230px;
+    margin: 0 auto;
+
+    @media screen and (max-width:979px) {
+      @include flexColumn;
+      gap: 25px;
+    }
+
+    .left-part {
+      @include flexColumn;
+      gap: 8px;
+      
+      h2 {
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 550;
+
+        @media screen and (max-width:348px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      p {
+        text-align: left;
+        font-weight: 620;
+
+        @media screen and (max-width:348px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .right-part {
+      button {
+        color: $black1;
+        border: 1px solid $black1;
+        font-size: 1.1rem;
+        font-weight: 650;
+        transition: 0.2s;
+
+        &:active {
+          color: $grey1;
+          border: 1px solid $grey1;
+        }
+
+        @media screen and (max-width:348px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .main-news {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    @media screen and (max-width:850px) {
+      padding: 20px 0;
+    }
+
+    .main-new-container {
+      display: grid;
+      grid-template-columns: 33% 34% 33%;
+      grid-template-rows: 1fr;
+      justify-items: center;
+
+      @media screen and (max-width:850px) {
+        @include flexColumn;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .new {
+        width: 255px;
+        @include flexColumn;
+        gap: 15px;
+
+        @media screen and (max-width:850px) {
+          max-width: 80%;
+          width: 100%;
+          align-items: center;
+          gap: 25px;
+        }
+
+        .mn-pic {
+          box-shadow: 0 0 20px 12px $grey1;
+
+          img {
+            display: flex;
+            cursor: pointer;
+          }
+        }
+
+        h4 {
+          text-align: left;
+          font-size: 1.1rem;
+          width: 100%;
+        }
+
+        p {
+          text-align: left;
+          height: 205px;
+          font-weight: 600;
+
+          @media screen and (max-width:850px) {
+            height: 120%;
+          }
+        }
+
+        .link {
+          text-align: left;
+          width: 100%;
+          
+          a {
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: $purple1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}

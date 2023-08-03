@@ -1,0 +1,16 @@
+.section-2 {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 65% 35%;
+
+  @media screen and (max-width:720px)  {
+    display: block;
+    height: auto;
+    padding: 20px 0;
+  }
+
+
+  .img {
+    background: url(/assets/img/img-right.webp) center/cover;
+  }
+}

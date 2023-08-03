@@ -1,0 +1,116 @@
+// fonts 
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/assets/fonts/Roboto-Light.ttf);
+}
+
+// variables 
+
+$font1: Roboto, sans-serif;
+$white1: rgb(250, 250, 250);
+$black1: rgb(10, 10, 10);
+$grey1: rgba(105, 105, 105, 0.897);
+$grey2: rgba(168, 168, 168, 0.404);
+$blue1: rgba(121, 213, 255, 0.932);
+
+// mixins
+
+@mixin centerChild {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin centerX {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin size100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+// body 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: $white1;
+  font-family: $font1;
+  color: $black1;
+}
+
+.section-1,
+.section-2,
+.contact {
+  box-shadow: inset 0 1px 0 $grey2;
+}
+
+.container {
+  height: 100%;
+  @include flexColumn;
+  justify-content: center;
+  
+  div {
+    @include centerChild;
+    width: 90%;
+    margin: 0 auto;
+    gap: 28px;
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 100;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+
+    p {
+      line-height: 38px;
+      color: $grey1;
+    }
+  }
+}
+
+.button {
+  background: transparent;
+  outline: none;
+  border: 2px solid $grey2;
+  color: $grey1;
+  padding: 12px 24px;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:active {
+    border: 2px solid $blue1;
+    color: $blue1;
+  }
+}
+
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
