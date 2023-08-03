@@ -1,0 +1,30 @@
+body {
+  overflow: hidden;
+  cursor: crosshair;
+  min-height: 100vh;
+}
+h1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-size: 6.5rem;
+  color: rgba(128, 128, 128, 0.479);
+  margin-top: -5px;
+  user-select: none;
+}
+.bubble {
+  position: absolute;
+  background: orange;
+  filter: hue-rotate(0deg);
+  animation: anim 8s forwards;
+  opacity: 0;
+  border-radius: 500rem;
+}
+@keyframes anim {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    filter: hue-rotate(720deg);
+  }
+}
