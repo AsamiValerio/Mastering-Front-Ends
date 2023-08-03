@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random number generator</title>
+</head>
+
+<body>
+  <label id="xlabel"></label><br>
+  <label id="ylabel"></label><br>
+  <label id="zlabel"></label><br>
+  <button type="button" id="rollButton">roll</button>
+
+  <script>
+    let x;
+    let y;
+    let z;
+
+    document.getElementById("rollButton").onclick = function () {
+
+      x = Math.floor(Math.random() * 6) + 1;
+      y = Math.floor(Math.random() * 6) + 1;
+      z = Math.floor(Math.random() * 6) + 1;
+
+      document.getElementById("xlabel").innerHTML = `You rolled :${x}`;
+      document.getElementById("ylabel").innerHTML = `You rolled :${y}`;
+      document.getElementById("zlabel").innerHTML = `You rolled :${z}`;
+    }
+  </script>
+</body>
+
+</html>
