@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>9i - Cart Quantity</title>
+</head>
+
+<body>
+  <button onclick="
+      displayCartQuantity();
+    ">Show Quantity</button>
+
+  <div class="add">
+    <button onclick="
+        updateCartQuantity(1);
+    ">Add to Cart</button>
+
+    <button onclick="
+        updateCartQuantity(2);
+      ">+2</button>
+
+    <button onclick="
+      updateCartQuantity(3);
+      ">+3</button>
+
+    <button onclick="
+      updateCartQuantity(4);
+      ">+4</button>
+
+    <button onclick="
+      updateCartQuantity(5);
+      ">+5</button>
+  </div>
+
+  <div>
+    <button onclick="
+      updateCartQuantity(-1);
+      ">Remove from Cart</button>
+
+    <button onclick="
+      updateCartQuantity(-2);
+      ">-2</button>
+
+    <button onclick="
+      updateCartQuantity(-3);
+      ">-3</button>
+  </div>
+
+  <button onclick="
+      cartQuantity = 0;
+      updateCartQuantity(0);
+    ">Reset Cart</button>
+
+    <p class="displayQuantity"></p>
+
+  <style>
+    button {
+      margin: 5px 0;
+    }
+  </style>
+
+  <script>
+    let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity'));
+
+    displayCartQuantity();
+
+    function updateCartQuantity(value) {
+      if (cartQuantity + value < 0) {
+        console.log('Not enough items in the cart');
+        return;
+      }
+      
+      if (cartQuantity + value > 10) {
+        console.log('The cart is full');
+        return;
+      } 
+
+      cartQuantity += value;
+
+      displayCartQuantity();    
+
+      localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+    }
+
+    function displayCartQuantity() {
+      if (cartQuantity > 0) {
+        document.querySelector('.displayQuantity').innerHTML = `Cart quantity: ${cartQuantity}.`
+      } else {
+        document.querySelector('.displayQuantity').innerHTML = 'Cart is empty.';
+      }
+    }
+
+  </script>
+</body>
+
+</html>

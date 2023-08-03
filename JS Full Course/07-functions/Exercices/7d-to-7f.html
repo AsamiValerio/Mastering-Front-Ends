@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+  <title>7d to 7f</title>
+</head>
+
+<body>
+ 
+  <style>
+  </style>
+
+  <script>
+    function convertToFahrenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
+
+    console.log(convertToFahrenheit(25));
+
+    function convertToCelsius(fahrenheit) {
+      return (fahrenheit - 32) * 5 / 9;
+    }
+
+    console.log(convertToCelsius(86));
+
+    function convertTemperature(degress, unit) {
+      if (unit === 'C') {
+        const result = convertToFahrenheit(degress);
+        return `${result}F`;
+      } else if (unit === 'F') {
+        const result = convertToCelsius(degress);
+        return `${result}C`
+      } 
+    }
+
+    console.log(convertTemperature(18, 'C'));
+    console.log(convertTemperature(64.4, 'F'));
+    </script>
+</body>
+
+</html>

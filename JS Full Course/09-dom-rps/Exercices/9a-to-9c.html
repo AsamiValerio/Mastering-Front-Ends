@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <title>9a to 9c</title>
+</head>
+
+<body>
+  <button>9a</button>
+  <button class="js-button">9b</button>
+
+  <div>
+    <button onclick="
+    document.querySelector('p').innerHTML = 'You chose: heads';
+  ">heads</button>
+
+    <button onclick="
+    document.querySelector('p').innerHTML = 'You chose: tails'
+  ">tails</button>
+  </div>
+
+  <p></p>
+
+  <style>
+    div {
+      margin: 10px 0;
+    }
+  </style>
+
+  <script>
+    console.log(document.querySelector('button'));
+
+    document.querySelector('.js-button').innerHTML = '9b done!';
+  </script>
+</body>
+
+</html>
