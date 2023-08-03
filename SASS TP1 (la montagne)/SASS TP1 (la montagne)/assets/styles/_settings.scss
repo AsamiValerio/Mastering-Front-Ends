@@ -1,0 +1,34 @@
+// variables
+
+$black: rgb(31, 30, 30);
+$white: rgb(250, 250, 250);
+$greylght: rgba(231, 231, 231, 0.774);
+$greybld: rgb(226, 226, 226);
+
+// font-family 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Merriweather:wght@300&display=swap');
+$font1: 'Merriweather';
+$font2: 'Inter';
+
+// mixins
+
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+// settings
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+    background: url(/images/bg.jpg) center/cover fixed no-repeat;
+    font-family: $font2;
+    }

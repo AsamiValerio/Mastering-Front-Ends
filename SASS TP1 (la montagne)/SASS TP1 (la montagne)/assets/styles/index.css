@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Merriweather:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: url(/images/bg.jpg) center/cover fixed no-repeat;
+  font-family: "Inter";
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    min-height: 98vh !important;
+  }
+  header .header-txt {
+    max-width: 80%;
+  }
+  header .header-txt h1 {
+    font-size: 2.8rem !important;
+  }
+  header nav {
+    font-size: 0.8rem !important;
+    max-width: 80%;
+    min-width: 80%;
+    text-align: center;
+    display: flex !important;
+    bottom: 18px !important;
+  }
+  header nav .nav-left li {
+    width: 33.3%;
+  }
+  header nav .nav-right {
+    display: none !important;
+  }
+  .stories {
+    min-width: 80%;
+  }
+  .stories .stories-header .date::before {
+    width: 15% !important;
+  }
+  .stories .stories-header .date::after {
+    width: 15% !important;
+  }
+  .stories .stories-header .stories-header-txt {
+    max-width: 80% !important;
+  }
+  .stories .stories-header .stories-header-txt h1 {
+    font-size: 2.2rem !important;
+  }
+  .stories .stories-header .stories-header-img {
+    min-height: 30vh !important;
+  }
+  .stories .stories-footer {
+    display: flex !important;
+    margin-top: 0px !important;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .stories .stories-footer p {
+    font-size: 0.7rem !important;
+    line-height: 20px !important;
+    margin-top: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 70% !important;
+  }
+  .stories .stories-footer h2 {
+    font-size: 1.2rem !important;
+    max-width: 45% !important;
+  }
+  .stories .stories-footer .stories-footer-left {
+    gap: 15px;
+  }
+  .stories .stories-footer .stories-footer-left .left-img {
+    max-width: 70% !important;
+    max-height: 25vh !important;
+  }
+  .stories .stories-footer .stories-footer-right {
+    gap: 15px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgba(231, 231, 231, 0.774);
+  }
+  .stories .stories-footer .stories-footer-right .right-img {
+    max-width: 70% !important;
+    max-height: 25vh !important;
+  }
+  footer {
+    max-width: 80% !important;
+  }
+  footer .footer-container {
+    display: flex !important;
+    flex-direction: column;
+    min-height: 95vh !important;
+  }
+  footer .footer-container .form-container {
+    height: 57.5vh !important;
+  }
+  footer .footer-container .form-container form textarea {
+    height: 20vh !important;
+  }
+  footer .footer-container .form-container form button {
+    width: 50% !important;
+  }
+  footer .footer-container .contact-container {
+    height: 37.5vh !important;
+    border-top: 1px solid rgba(138, 135, 135, 0.26);
+  }
+  footer .footer-container .contact-container div p {
+    max-height: 50px;
+    margin-right: 10px !important;
+    line-height: 20px;
+  }
+}
+header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(250, 250, 250);
+}
+header .header-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+  position: relative;
+}
+header .header-txt h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  max-width: 680px;
+}
+header .header-txt em {
+  font-family: "Merriweather";
+}
+header .header-txt i {
+  margin-top: 80px;
+  font-size: 2rem;
+  border: 1px solid rgb(250, 250, 250);
+  padding: 15px 20px;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+header .header-txt i:hover {
+  animation: arrow1 0.6s infinite linear;
+}
+@keyframes arrow1 {
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+header nav {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  font-size: 1rem;
+  background: rgba(158, 158, 158, 0.493);
+}
+header nav .nav-left {
+  display: flex;
+  text-transform: uppercase;
+}
+header nav .nav-left li {
+  padding: 20px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+header nav .nav-left li:hover {
+  color: rgb(31, 30, 30);
+  background: rgba(231, 231, 231, 0.774);
+}
+header nav .nav-right {
+  display: flex;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+header nav .nav-right li {
+  width: 25%;
+}
+header nav .nav-right i {
+  transition: 0.2s;
+  cursor: pointer;
+}
+header nav .nav-right i:hover {
+  font-size: 1.8rem;
+}
+
+.stories {
+  min-height: 180vh;
+  background: rgb(250, 250, 250);
+  max-width: 70%;
+  margin: 0 auto;
+}
+.stories .stories-header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+.stories .stories-header .date {
+  font-family: "Merriweather";
+  font-size: 0.9rem;
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+}
+.stories .stories-header .date::before {
+  content: "";
+  position: absolute;
+  width: 33%;
+  height: 3px;
+  background: rgba(231, 231, 231, 0.774);
+  right: 80px;
+  top: 8px;
+}
+.stories .stories-header .date::after {
+  content: "";
+  position: absolute;
+  width: 33%;
+  height: 3px;
+  background: rgba(231, 231, 231, 0.774);
+  left: 80px;
+  top: 8px;
+}
+.stories .stories-header .stories-header-txt {
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.stories .stories-header .stories-header-txt h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.stories .stories-header .stories-header-txt em {
+  font-family: "Merriweather";
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 33px;
+}
+.stories .stories-header .stories-header-img {
+  min-height: 50vh;
+  min-width: 80%;
+  background: url(/images/pic01.jpg) center/cover no-repeat;
+}
+.stories .stories-footer {
+  min-height: 80vh;
+  margin-top: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+}
+.stories .stories-footer p {
+  font-size: 0.8rem;
+  font-family: "Merriweather";
+  line-height: 33px;
+  max-width: 80%;
+}
+.stories .stories-footer h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  max-width: 36%;
+  text-transform: uppercase;
+}
+.stories .stories-footer .stories-footer-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-right: 1px solid rgba(231, 231, 231, 0.774);
+}
+.stories .stories-footer .left-img {
+  background: url(/images/pic02.jpg) center/cover no-repeat;
+  height: 30vh;
+  width: 80%;
+}
+.stories .stories-footer .stories-footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.stories .stories-footer .right-img {
+  background: url(/images/pic03.jpg) center/cover no-repeat;
+  height: 30vh;
+  width: 80%;
+}
+.stories .stories-footer::before {
+  content: "";
+  width: 100%;
+  background: rgba(231, 231, 231, 0.774);
+  height: 1px;
+  position: absolute;
+}
+
+button {
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: transparent;
+  border: 1px solid;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  color: rgb(250, 250, 250);
+  background: rgb(31, 30, 30);
+}
+
+footer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+footer .footer-container {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  align-items: center;
+  background: rgb(226, 226, 226);
+  width: 100%;
+  color: rgb(58, 58, 58);
+}
+footer .footer-container .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid rgba(173, 173, 173, 0.404);
+}
+footer .footer-container .form-container form {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 90%;
+  gap: 20px;
+  padding: 20px;
+}
+footer .footer-container .form-container form label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+footer .footer-container .form-container form input {
+  height: 35px;
+  padding: 5px;
+  outline: none;
+  border: 1px solid rgba(194, 183, 183, 0.637);
+  background: transparent;
+}
+footer .footer-container .form-container form textarea {
+  resize: none;
+  height: 40vh;
+  background: transparent;
+  border: 1px solid rgba(194, 183, 183, 0.637);
+  padding: 5px;
+  outline: none;
+  margin-bottom: 25px;
+}
+footer .footer-container .form-container form button {
+  width: 33%;
+}
+footer .footer-container .contact-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+footer .footer-container .contact-container div {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+  height: 25%;
+  border-bottom: 1px solid rgba(194, 183, 183, 0.637);
+}
+footer .footer-container .contact-container div h3 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-align: center;
+}
+footer .footer-container .contact-container div p {
+  font-family: "Merriweather";
+  justify-items: start;
+  font-size: 0.8rem;
+  margin-right: 200px;
+}
+footer .footer-container .contact-container div ul {
+  display: flex;
+  width: 100%;
+  gap: 23px;
+}
+footer .footer-container .contact-container div ul li i {
+  border: 1px solid rgba(194, 183, 183, 0.637);
+  padding: 12px;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+footer .footer-container .contact-container div ul li .fa-facebook-f {
+  padding: 12px 15px;
+}
+footer .footer-container .contact-container div ul li .fa-instagram {
+  padding: 12px 13px;
+}
+footer .footer-container .contact-container div ul li i:hover {
+  color: rgb(250, 250, 250);
+  border-color: rgb(250, 250, 250);
+}/*# sourceMappingURL=index.css.map */

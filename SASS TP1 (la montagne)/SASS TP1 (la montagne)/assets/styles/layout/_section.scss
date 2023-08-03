@@ -1,0 +1,108 @@
+.stories {
+  min-height: 180vh;
+  background: $white;
+  max-width: 70%;
+  margin: 0 auto;
+  .stories-header {
+    min-height: 100vh;
+    @include centerChild;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    .date {
+      font-family: $font1;
+      font-size: 0.9rem;
+      position: relative;
+      margin-top: 50px;
+      width: 100%;
+    }
+    .date::before {
+      content: "";
+      position: absolute;
+      width: 33%;
+      height: 3px;
+      background: $greylght;
+      right: 80px;
+      top: 8px;
+    }
+    .date::after {
+      content: "";
+      position: absolute;
+      width: 33%;
+      height: 3px;
+      background: $greylght;
+      left: 80px;
+      top: 8px;
+    }
+    .stories-header-txt {
+      max-width: 40%;
+      @include centerChild;
+      flex-direction: column;
+      gap: 40px;
+      h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+      }
+      em {
+        font-family: $font1;
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 33px;
+      }
+    }
+    .stories-header-img {
+      min-height: 50vh;
+      min-width: 80%;
+      background: url(/images/pic01.jpg) center/cover no-repeat;
+    }
+  }
+  .stories-footer {
+    min-height: 80vh;
+    margin-top: 50px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    p {
+      font-size: 0.8rem;
+      font-family: $font1;
+      line-height: 33px;
+      max-width: 80%;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.6rem;
+      max-width: 36%;
+      text-transform: uppercase;
+    }
+    .stories-footer-left {
+      @include centerChild;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border-right: 1px solid $greylght;
+    }
+    .left-img {
+      background: url(/images/pic02.jpg) center/cover no-repeat;
+      height: 30vh;
+      width: 80%;
+    }
+    .stories-footer-right {
+      @include centerChild;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .right-img {
+      background: url(/images/pic03.jpg) center/cover no-repeat;
+      height: 30vh;
+      width: 80%;
+    }
+  }
+  .stories-footer::before {
+    content: "";
+    width: 100%;
+    background: $greylght;
+    height: 1px;
+    position: absolute;
+  }
+}

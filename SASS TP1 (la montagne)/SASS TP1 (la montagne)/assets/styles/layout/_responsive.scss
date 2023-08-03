@@ -1,0 +1,115 @@
+@media screen and (max-width:530px) {
+  header {
+    min-height: 98vh !important;
+    .header-txt {
+      max-width: 80%;
+      h1 {
+        font-size: 2.8rem !important;
+      }
+    }
+    nav {
+      font-size: 0.8rem !important;
+      max-width: 80%;
+      min-width: 80%;
+      text-align: center;
+      display: flex !important;
+      bottom: 18px !important;
+      .nav-left {
+        li {
+          width: 33.3%;
+        }
+      }
+      .nav-right {
+        display: none !important;
+      }
+    }
+  }
+  .stories {
+    min-width: 80%;
+    .stories-header {
+      .date {
+      }
+      .date::before {
+        width: 15% !important;
+      }
+      .date::after {
+        width: 15% !important;
+      }
+      .stories-header-txt {
+        max-width: 80% !important;
+        h1 {
+          font-size: 2.2rem !important;
+        }
+      }
+      .stories-header-img {
+        min-height: 30vh !important;
+      }
+    }
+    .stories-footer {
+      display: flex !important;
+      margin-top: 0px !important;
+      flex-direction: column;
+      gap: 15px;
+      p {
+        font-size: 0.7rem !important;
+        line-height: 20px !important;
+        margin-top: 10px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        max-width: 70% !important;
+      }
+      h2 {
+        font-size: 1.2rem !important;
+        max-width: 45% !important;
+      }
+      .stories-footer-left {
+        gap: 15px;
+        .left-img {
+          max-width: 70% !important;
+          max-height: 25vh !important;
+        }
+      }
+      .stories-footer-right {
+        gap: 15px;
+        padding-bottom: 10px;
+        border-top: 1px solid rgba(231, 231, 231, 0.774);
+        .right-img {
+          max-width: 70% !important;
+          max-height: 25vh !important;
+        }
+      }
+    }
+  }
+  footer {
+    max-width: 80% !important;
+    .footer-container {
+      display: flex !important;
+      flex-direction: column;
+      min-height: 95vh !important;
+      .form-container {
+        height: 57.5vh !important;
+        form {
+          textarea {
+            height: 20vh !important;
+          }
+          button {
+            width: 50% !important;
+          }
+        }
+      }
+      .contact-container {
+        height: 37.5vh !important;
+        border-top: 1px solid rgba(138, 135, 135, 0.26);
+        div {
+          p {
+            max-height: 50px;
+            margin-right: 10px !important;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
