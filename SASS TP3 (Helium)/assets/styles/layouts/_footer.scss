@@ -1,0 +1,133 @@
+footer {
+  background: $black1;
+  border-radius: 10px 10px 0 0;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 20px 0 50px;
+  align-content: center;
+
+  @media screen and (max-width:805px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  h4 {
+    font-size: 1.6rem;
+    margin: 0 30px;
+
+    @media screen and (max-width:1000px) {
+      font-size: 1.2rem;
+    }
+
+    @media screen and (max-width:805px) {
+      font-size: 1.6rem;
+    }
+    
+  }
+
+  .infos-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+      margin: 0 30px;
+
+      @media screen and (max-width:805px) {
+        margin: 10px auto;
+      }
+
+      button {
+        padding: 15px 0px;
+        width: 220px;
+        border-radius: 1rem;
+        background: $blue1;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        @media screen and (max-width:1000px) {
+          padding: 10px 0;
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .infos-right {
+    display: grid;
+    grid-template-rows: 35% 65%;
+    margin-top: 10px;
+
+    @media screen and (max-width:805px) {
+      gap: 5px;
+    }
+
+    .investors {
+      margin-top: 20px;
+      .img-container {
+          display: grid;
+          grid-template-columns: repeat(3, 33%);
+          align-items: center;
+          justify-items: center;
+
+        img {
+          width: 200px;
+          cursor: pointer;
+
+          @media screen and (max-width:1170px) {
+            width: 150px;
+          }
+
+          @media screen and (max-width:1000px) {
+            width: 100px;
+          }
+
+          @media screen and (max-width:450px) {
+            width: 80px;
+          }       
+        }
+
+        img:nth-child(1) {
+          width: 140px;
+
+          @media screen and (max-width:1170px) {
+            width: 100px;
+          }
+
+          @media screen and (max-width:1000px) {
+            width: 70px;
+          }
+
+          @media screen and (max-width:450px) {
+            width: 50px;
+          }       
+        }
+
+        img:nth-child(2) {
+          width: 220px;
+
+          @media screen and (max-width:1170px) {
+            width: 190px;
+          }
+
+          @media screen and (max-width:1000px) {
+            width: 150px;
+          }
+
+          @media screen and (max-width:450px) {
+            width: 110px;
+          }
+        }
+      }
+    }
+  }
+}

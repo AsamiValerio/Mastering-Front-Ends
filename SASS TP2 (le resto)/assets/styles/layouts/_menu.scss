@@ -1,0 +1,123 @@
+.menu {
+  padding-top: 60px;
+  height: 120vh;
+  background: url(/assets/img/bg-menu-01.jpg) bottom no-repeat;
+
+  @media screen and (max-width:530px) {
+      height: 192vh;
+  }  
+
+  .menu-container {
+    max-width: 60%;
+    margin: 0 auto;
+
+    @media screen and (max-width:530px) {
+      max-width: 80%;
+      height: 170vh;
+    }  
+
+    h2 {
+      font-size: 1.7rem;
+    }
+    .menu-nav {
+      
+      ul {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          text-decoration: underline;
+          text-decoration-style: dotted;
+          text-underline-offset: 10px;
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            text-decoration-style: dashed;
+          }
+        }
+      }
+    }
+
+    .menu-items {
+      margin-top: 35px;
+      background: $white1;
+      color: $black2;
+      border-top: 3px solid $orange;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      height: 80vh;
+      width: 100%;
+
+      @media screen and (max-width:530px) {
+        display: flex;
+        flex-direction: column;
+        height: 149.3vh;
+        gap: 33px;
+      }  
+
+      .menu-dish {
+        display: grid;
+        grid-template-areas: "img h4 p"
+        "img s p";
+        justify-items: start;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        margin: 0 20px;
+        border-bottom: 1px dotted $orange2;
+
+        @media screen and (max-width:530px) {
+          padding-bottom: 25px;
+          margin: 15px 20px 0;
+          justify-content: start;
+          gap: 13px;
+        }  
+
+        .dish-img {
+          grid-area: img;
+          height: 100px;
+          width: 100px;
+          border-radius: 2rem;
+        }
+
+        h4 {
+          grid-area: h4;
+          text-transform: uppercase;
+          font-size: 1rem;
+
+          @media screen and (max-width:530px) {
+            font-size: 0.9rem;
+          }  
+        }
+
+        span {
+          grid-area: s;
+          font-size: 1rem;
+          text-align: start;
+          margin-top: -33px;
+
+          @media screen and (max-width:530px) {
+            font-size: 0.9rem;
+          }  
+        }
+
+        p {
+          grid-area: p;
+          color: $orange2;
+          font-weight: 600;
+          font-size: 1.2rem;
+        }
+
+        h4,
+        span {
+          @media screen and (max-width:530px) {
+            width: 200px;
+            text-align: left;
+          }  
+        }
+      }
+    }
+  }
+}

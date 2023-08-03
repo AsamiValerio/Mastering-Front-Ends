@@ -1,0 +1,52 @@
+.main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: $white1;
+
+    @media screen and (max-width:530px) {
+      display: inline-block;
+    }  
+
+  .main-left {
+    border: 1px dotted $orange;
+    margin: 15px 20px;
+    padding: 25px 15px;
+    color: $black2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @media screen and (max-width:530px) {
+      height: 50vh;
+      padding: 25px 35px;
+    }  
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .main-avatar {
+      background: url(/assets/img/avatar-01.jpg) center/cover;
+      height: 70px;
+      width: 70px;
+      border-radius: 2rem;
+      margin: 30px 0;
+    }
+
+    p {
+      color: $grey1;
+      margin-top: 2px;
+    }
+  }
+
+  .main-right {
+  @media screen and (max-width:530px) {
+    display: none;
+    }  
+
+    .main-img {
+      background: url(/assets/img/store-01.jpg) center/cover;
+      @include size100;
+    }
+  }
+}

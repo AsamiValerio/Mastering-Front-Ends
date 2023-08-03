@@ -1,0 +1,87 @@
+header {
+  background: url(/assets/img/bg-slider-06.jpg) center/cover;
+  height: 100vh;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 25px;
+    padding-top: 20px;
+
+    h1 {
+      width: 10%;
+      display: flex;
+      font-size: 2.1rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      width: 70%;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+
+    @media screen and (max-width:530px) {
+      display: none;
+    }
+      
+      li {
+        cursor: pointer;
+        transition: 0.2s;
+        
+        &:hover {
+          text-decoration: underline;
+          text-decoration-style: dotted;
+          text-underline-offset: 7px;
+        }
+      }
+    }
+
+    .nav-networks {
+      display: flex;
+      width: 20%;
+      justify-content: space-evenly;
+      font-size: 0.8rem;
+
+    @media screen and (max-width:530px) {
+      width: 70%;
+    }  
+
+      li {
+        transition: 0.2s;
+
+        &:hover {
+          transform: scale(1.4);
+        }
+      }
+
+    }
+  }
+
+  .header-container {
+    margin: 220px 0 0;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 3rem;
+      letter-spacing: 10px;
+      margin-top: -25px;
+    }
+
+    .icon {
+      margin: 55px auto 45px;
+    }
+
+    p {
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      font-size: 0.8rem;
+    }
+  }
+}

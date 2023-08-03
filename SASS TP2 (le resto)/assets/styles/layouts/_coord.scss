@@ -1,0 +1,77 @@
+.coord {
+  min-height: 60vh;
+  position: relative;
+
+  @media screen and (max-width:530px) {
+    min-height: 80vh;
+  }
+
+  .coord-img {
+    background: url(/assets/img/gmap.jpg) center no-repeat;
+    background-size: 105rem;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+
+    @media screen and (max-width:530px) {
+      background-size: 80rem;
+    }
+  }
+
+  .coord-container {
+    width: 70%;
+    height: 35vh;
+    margin: 0 auto;
+    background: $white1;
+    color: $black2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    @media screen and (max-width:530px) {
+      justify-content: flex-start;
+      height: 520px;
+    }
+
+    &::before {
+      content: "";
+      background: url(/assets/img/avatar-02.jpg) center/cover no-repeat;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      border-radius: 2rem;
+      top: -35px;
+      @include centerX;
+      
+    }
+
+    span {
+      max-width: 80%;
+      margin: 50px auto 0;
+      line-height: 33px;
+
+      @media screen and (max-width:530px) {
+        font-size: 0.9rem;
+        margin: 70px auto 0;
+      }
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin: 40px 0 15px;
+
+      @media screen and (max-width:530px) {
+        margin: 30px 0 15px;
+      }
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: $orange1;
+    }
+  }
+}

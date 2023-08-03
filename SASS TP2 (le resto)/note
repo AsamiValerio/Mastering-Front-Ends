@@ -1,0 +1,4 @@
+// refaire "menu".
+// retirer "height" dans certains éléments (ex: height de booking-left) pour meilleur responsive, éviter débordement (voir vidéo correction).
+// utiliser + de min/max-widht-height et + de pourcentage pour faciliter le responsive.
+// placer "grid-template-row/colum" pour faciliter le responsive.

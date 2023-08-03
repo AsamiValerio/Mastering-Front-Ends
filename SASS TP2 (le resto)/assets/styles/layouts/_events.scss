@@ -1,0 +1,131 @@
+.events {
+  height: 80vh;
+
+  @media screen and (max-width:530px) {
+    display: none;
+  }
+
+  .events-header {
+    h2, 
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .events-items {
+    display: grid;
+    grid-template-areas: 
+    "e1 e3"
+    "e2 e3";
+    width: 70%;
+    margin: 0 auto;
+    gap: 20px;
+
+    img {
+      height: 200px;
+      width: 250px;
+    }
+
+    .events-txt {
+      background: $white1;
+      color: $black2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 25px;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+    }
+
+    .events-info {
+      display: flex;
+      color: $grey1;
+      font-size: 1.2rem;
+      gap: 7px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      text-transform: uppercase
+      ;
+      letter-spacing: 1px;
+      font-family: $font2;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .first-event {
+      grid-area: e1;
+    }
+    
+    .second-event {
+      grid-area: e2;
+    }
+
+    .first-event,
+    .second-event {
+      display: flex;
+      position: relative;
+
+      &::after {
+        content: "08 July";
+        width: 100px;
+        height: 100px;
+        background: $black2;
+        color: $white1;
+        position: absolute;
+        left: 12%;
+        top: 25%;
+        @include centerChild;
+        font-size: 1.4rem;
+      }
+
+      .events-txt {
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .third-event {
+      grid-area: e3;
+      position: relative;
+      width: 100%;
+      @include centerChild;
+
+      &::after {
+        content: "08 July";
+        width: 100px;
+        height: 100px;
+        background: $black2;
+        color: $white1;
+        position: absolute;
+        @include centerX;
+        top: 5%;
+        @include centerChild;
+        font-size: 1.4rem;
+      }
+
+      img {
+        z-index: -1;
+        position: absolute;
+        @include size100;
+        @include centerX;
+      }
+
+      .events-txt {
+        align-items: center;
+        height: 90%;
+        width: 90%;
+        justify-content: flex-end;
+
+        button {
+          margin: 30px 0 45px;
+        }
+      }
+    }
+  }
+}
