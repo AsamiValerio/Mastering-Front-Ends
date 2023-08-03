@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Le titre de la page -->
+    <title>Cours HTML</title>
+    <!-- Icone de l'onglet -->
+    <link rel="shortcut icon" href="logo-html5.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Titre Texte - H1</h1>
+      <p>Ceci est une phrase.</p>
+      <p>à la ligne ?<span> Pas à la ligne.</span></p>
+      <p>
+        Ou va aller ce texte ?<em> Italique power bro.</em
+        ><strong> J'ai TOUT compris.</strong>
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+        consequuntur.
+      </p>
+    </header>
+    <section>
+      <div>
+        <h2><span>&#10162;</span> Photo - H2</h2>
+        <img src="citadel.jpg" height="200" alt="citadelleMassEffect" />
+      </div>
+      <div>
+        <h3>Titre Listes - H3</h3>
+        <ul>
+          <li>UL = Unordered List</li>
+          <li>UL = Unordered List</li>
+          <li>MAJ+SHIFT+DA (Down Arrow) = recopier la ligne</li>
+        </ul>
+        <ol>
+          <li>OL = Ordered List</li>
+          <li>OL = Ordered List</li>
+          <li>OL = Ordered List</li>
+        </ol>
+      </div>
+      <div>
+        <h4>Titre Tableau - H4</h4>
+        <table border="2" width="50%">
+          <!-- Légende -->
+          <caption>
+            Population d'Europe
+          </caption>
+          <!-- En-tête -->
+          <thead>
+            <tr>
+              <th>Pays</th>
+              <th>Population</th>
+            </tr>
+          </thead>
+          <!-- Corps du tableau -->
+          <tbody>
+            <tr>
+              <td>France</td>
+              <td>67,75M</td>
+            </tr>
+            <tr>
+              <td>Allemagne</td>
+              <td>83,2M</td>
+            </tr>
+            <tr>
+              <td>Espagne</td>
+              <td>47M</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h5><span>&#10162;</span>Titre Liens - H5</h5>
+        <a href="https://htmlcheatsheet.com/" target="_blank"
+          >HTML Cheat Sheet</a
+        >
+        <br />
+        <a
+          href="https://www.toptal.com/designers/htmlarrows/symbols/"
+          target="_blank"
+          >Icones en HTML</a
+        >
+      </div>
+      <div>
+        <h6>Titre Vidéo - H6</h6>
+        <video src="SkyrimVidéo.mp4" height="400" loop muted></video>
+      </div>
+    </section>
+    <br>
+    <!-- Formulaire -->
+    <section>
+      <h2>Formulaire</h2>
+      <form action="/action.php" method="post">
+        <label for="name">Nom </label><input id="name" type="text" placeholder="Entrez votre nom">
+        <br>
+        <label for="age">Âge </label><input id="age" type="number" min="1" max="120" step="1" value="30">
+        <br>
+        <!-- Input Select -->
+        <label for="gender">Genre</label>
+        <select id="gender">
+          <option selected value="homme">Homme</option>
+          <option value="femme">Femme</option>
+        </select>
+        <br>
+        <!-- Input Radio -->
+        <div>
+          <input type="radio" name="race" checked id="human"><label for="human">Humain</label>
+          <input type="radio" name="race" id="asari"><label for="asari">Asari</label>
+          <input type="radio" name="race" id="turien"><label for="turien">Turien</label>
+        </div>
+        <textarea cols="30" rows="10" placeholder="Entrez votre demande ici."></textarea>
+        <br>
+        <!-- Input Checkbox -->
+        <label><input type="checkbox"/> Accepter les CGV</label>
+        <br>
+        <input type="submit" value="Valider">
+      </form>
+    </section>
+    <br>
+    <!-- Mail & envoi de fichier -->
+    <footer>
+      <a href="mailto:sento@hotmail.be" target="_blank">Les moissonneurs...</a>
+      <br>
+      <a href="Notice.txt" download="nom-du-fichier">Télécharger la notice</a>
+    </footer>
+  </body>
+</html>
