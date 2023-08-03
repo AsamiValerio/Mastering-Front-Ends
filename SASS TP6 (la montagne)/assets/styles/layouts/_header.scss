@@ -1,0 +1,171 @@
+header {
+  height: 100vh;
+  color: $white1;
+
+  .header-content {
+    @include flexColumn;
+    height: 90%;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 5.5rem;
+      margin-bottom: 50px;
+      width: 90%;
+
+      @media screen and (max-width:945px) {
+        font-size: 4.5rem;
+      }
+
+      @media screen and (max-width:692px) {
+        font-size: 3.6rem;
+      }
+
+      @media screen and (max-width:557px) {
+        font-size: 3rem;
+      }
+
+      @media screen and (max-width:467px) {
+        font-size: 2.5rem;
+      }
+
+      @media screen and (max-width:392px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-family: $font2;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.2rem;
+      width: 80%;
+
+      @media screen and (max-width:557px) {
+          font-size: 1rem;
+      }
+    }
+
+    span {
+      width: 72px;
+      height: 72px;
+      border: 1px solid $white1;
+      @include flexColumn;
+      border-radius: 3rem;
+      cursor: pointer;
+      margin-top: 70px;
+
+      a {
+        font-size: 2rem;
+        padding: 16px;
+        border-radius: 2rem;
+
+        &:active {
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    width: 85%;
+    height: 10%;
+    margin: 0 auto;
+    background: rgba(245, 245, 245, 0.301);
+    backdrop-filter: blur(1.5px);
+
+    @media screen and (max-width:1370px) {
+      grid-template-columns: 70% 30%;
+    }
+
+    @media screen and (max-width:945px) {
+      grid-template-columns: 100%;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: grid;
+    }
+
+    .nav-left {
+      grid-template-columns: 33% 33% 34%;
+      height: 100%;
+      
+      &:hover li:not(:hover) {
+        background: none;
+        color: $white1;
+      }
+
+      li {
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        letter-spacing: 1px;
+        line-height: 23px;
+
+        @media screen and (max-width:1089px) {
+          font-size: 1rem;
+        }
+
+        @media screen and (max-width:510px) {
+          font-size: 0.9rem;
+        }
+
+        @media screen and (max-width:390px) {
+          font-size: 0.8rem;
+        }
+
+        &:first-child {
+          background: rgb(243,243,243);
+          color: $black1;
+        }
+
+        &:hover {
+          background: rgb(243,243,243);
+          color: $black1;
+        }
+      }
+    }
+
+    .nav-right {
+      grid-template-columns: repeat(4, 15%);
+      width: 100%;
+      justify-content: end;
+
+      @media screen and (max-width:1370px) {
+        grid-template-columns: repeat(4, 24%);
+      }
+
+      @media screen and (max-width:945px) {
+        display: none;
+      }
+
+      li {
+
+        i {
+          font-size: 1.4rem;
+          transition: 0.2s;
+          cursor: pointer;
+
+          @media screen and (max-width:1014px) {
+          font-size: 1.2rem;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
+          &:active {
+            color: rgba(36, 36, 36, 0.671);
+          }
+        }
+      }
+    }
+  }
+}

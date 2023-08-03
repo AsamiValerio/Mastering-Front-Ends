@@ -1,0 +1,75 @@
+// fonts
+
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url(/assets/fonts/Merriweather-Light.ttf);
+}
+
+// variables 
+
+$font1: Inter, sans-serif;
+$font2: Merriweather, sans-serif;
+$white1: rgb(250, 250, 250);
+$black1: rgb(20, 20, 20);
+$grey1: rgb(105,105,105);
+$grey2: rgb(233,233,233);
+
+// mixins 
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerX {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// body 
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+
+body {
+  text-align: center;
+  color: $black1;
+  background: url(/assets/img/bg.webp) center/cover fixed;
+  font-family: $font1;
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: 10px 26px;
+  letter-spacing: 2px;
+  font-family: $font1;
+  font-size: 0.8rem;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid $black1;
+  user-select: none;
+
+  &:active {
+    color: $white1;
+    border: 2px solid $white1;
+    background: $black1;
+  }
+}
+
+a,
+a:visited {
+  color: $white1;
+  text-decoration: none;
+}

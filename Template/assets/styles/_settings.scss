@@ -1,0 +1,56 @@
+// fonts
+
+// variables 
+
+$white1: rgb(250, 250, 250);
+$black1: rgb(20, 20, 20);
+
+// mixins 
+
+@mixin columnChild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin centerChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centerX {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin size100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin grid50 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+// body 
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}

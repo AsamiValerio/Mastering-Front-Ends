@@ -1,0 +1,328 @@
+.events {
+  padding-bottom: 90px;
+  
+  .events-container {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+    
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 100;
+    }
+
+    h3 {
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin-top: -12px;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: 58% 42%;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "a b"
+        "c b";
+      gap: 20px;
+
+      @media screen and (max-width:1175px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 180px 180px 210px;
+        grid-template-areas: "a"
+        "c"
+        "b";
+        max-width: 700px;
+        margin: 0 auto;  
+      }
+
+      @media screen and (max-width:670px) {
+        gap: 35px;
+      }   
+
+        .date-content {
+          background: $black1;
+          height: 86px;
+          width: 86px;
+          margin: 0 auto;
+          color: $white1;
+          @include centerChild;
+          flex-direction: column;
+          line-height: 22px;
+
+          h6 {
+            font-size: 1.6rem;
+          }
+        }
+
+        .address {
+          background: $white1;
+          padding: 30px 0 30px 20px;
+          @include flexColumn;
+
+          @media screen and (max-width:670px) {
+            padding: 20px 0 20px 20px;
+          }   
+
+          @media screen and (max-width:483px) {
+            padding: 20px 0 20px;
+          }   
+
+          h4 {
+            font-size: 1.3rem;
+            font-weight: 300;
+            padding-left: 10px;
+            width: 95%;
+
+            @media screen and (max-width:483px) {
+             color: white; 
+            }
+          }
+        
+        .events-info {
+          margin: 30px 0;
+          display: flex;
+          gap: 5px;
+
+          @media screen and (max-width:670px) {
+            flex-direction: column;
+            gap: 10px;
+          }   
+          
+          p,
+          span {
+            color: $grey1;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            @media screen and (max-width:483px) {
+              color: white;
+            }
+  
+            i {
+              font-size: 0.9rem;
+              margin-left: 8px;
+            }
+          }
+        }
+
+
+          h5 {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+
+            @media screen and (max-width:483px) {
+              margin-left: 10px;
+              color: white;
+            }
+          }
+        }
+    }
+
+    .event-1, 
+    .event-2 {
+      display: grid;
+      grid-template-columns: 39% 61%;
+      text-align: left;
+
+      @media screen and (max-width:483px) { 
+       grid-template-columns: 13% 87%;
+      }
+
+      .date {
+        @include centerChild;
+
+        @media screen and (max-width:483px) {
+
+        }
+      }
+
+      .address {
+        align-items: flex-start;
+
+        @media screen and (max-width:483px) {
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          color: white;
+        }
+      }
+    }
+
+    .event-1 {
+      grid-area: a;
+      
+      .date {
+        background: url(/assets/img/event-01.jpg) center/cover;
+
+        @media screen and (max-width:483px) {
+         background: $black1; 
+        }
+      }
+
+      .address {
+
+        @media screen and (max-width:483px) {
+          background: url(/assets/img/event-01.jpg) bottom;
+        }
+      }
+    }
+
+    .event-2 {
+      grid-area: c;
+      
+      .date {
+        background: url(/assets/img/event-02.jpg) center/cover;
+
+        @media screen and (max-width:483px) {
+          background: $black1;
+        }
+      }
+
+      .address {
+        @media screen and (max-width:483px) {
+          background: url(/assets/img/event-02.jpg) center/cover; 
+        }
+      }
+    }
+
+    .event-3 {
+      grid-area: b;
+      padding: 25px;
+      background: url(/assets/img/event-03.jpg) center/cover;
+      
+      @media screen and (max-width:1175px) {
+        background: $white1;
+        padding: 0;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 39% 61%;
+      }
+
+      @media screen and (max-width:483px) {
+       grid-template-columns: 13% 87%; 
+       background: $black1;
+      }
+
+      .responsive-img {
+
+        @media screen and (max-width:1175px) {
+          background: url(/assets/img/event-03.jpg) center/cover;
+          @include centerChild;
+        }
+
+        @media screen and (max-width:483px) {
+          background: $black1;
+        }
+
+        .date-content {
+          display: none;
+
+          @media screen and (max-width:1175px) {
+            display: flex;
+          }
+        }
+      }
+
+      .address {
+        height: 100%;
+        padding: 0 12px;
+
+        @media screen and (max-width:1175px) {
+          padding: 30px 0 30px 20px;
+        }
+
+        @media screen and (max-width:670px) {
+          padding: 20px 0 20px 20px;
+        }   
+
+        @media screen and (max-width:483px) {
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 20px 0 20px 8px;
+          background: url(/assets/img/event-03.jpg) center/cover;
+          color: white;
+        }
+
+        .date {
+          @media screen and (max-width:1175px) {
+            display: none;
+          }
+        }
+
+        h4 {
+          width: 90%;
+          margin: 40px auto 0px;
+          line-height: 28px;
+
+          @media screen and (max-width:1175px) {
+            margin: 0;
+            padding-left: 10px;
+            width: 80%;
+          }
+        }
+
+        .events-info {
+          justify-content: center;
+
+          @media screen and (max-width:1175px) {
+            justify-content: flex-start;
+            margin: 0;
+            padding-left: 10px;
+          }    
+
+          @media screen and (max-width:670px) {
+            margin: 30px 0;
+            padding-left: 0;
+          }   
+
+          @media screen and (max-width:483px) {
+           margin-right: 30px; 
+          }
+
+          p {
+  
+            @media screen and (max-width:1175px) {
+              margin: 30px 0 30px -10px;
+             display: flex;
+             align-items: center;
+             gap: 5px;
+             text-align: left;
+             justify-content: flex-start;
+            }   
+            
+            @media screen and (max-width:670px) {
+              margin: 0;
+            }  
+            
+            @media screen and (max-width:483px) {
+              color: white;
+            }
+          }
+
+          span {
+
+            @media screen and (max-width:483px) {
+             color: white; 
+            }
+          }
+        }
+
+        h5 {
+          margin: 20px auto 0;
+          width: 110px;
+
+          @media screen and (max-width:1175px) {
+            margin: 0;
+          }
+
+          @media screen and (max-width:483px) {
+            margin: 0 10px 0;
+          }
+        }
+      }
+    }
+  }
+}

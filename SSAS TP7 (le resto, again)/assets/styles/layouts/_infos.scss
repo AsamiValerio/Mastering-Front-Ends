@@ -1,0 +1,135 @@
+.infos {
+  padding: 120px 0;
+
+  .infos-content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (max-width:1190px) {
+      grid-template-columns: 300px 65%;  
+      justify-content: center;
+    }
+
+    @media screen and (max-width:760px) {
+      grid-template-columns: 1fr; 
+    }
+
+    .hours {
+      background: $black1;
+      min-width: 300px;
+
+      .hours-content {
+        border: 1px dotted $orange1;
+        margin: 25px;
+        padding: 20px;
+
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: -13px;
+        }
+
+        h3 {
+          letter-spacing: 1px;
+        }
+
+        h5 {
+          color: $orange1;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          margin: 30px 0 20px;
+        }
+
+        p {
+          color: $white1;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .booking {
+      background: $white1;
+
+      .booking-container {
+
+        h2 {
+          margin-top: 60px;
+          font-size: 2.2rem;
+          font-weight: 400;
+
+          @media screen and (max-width:400px) {
+            font-size: 2rem;
+          }
+        }
+
+        h3 {
+          color: $black1;
+          font-size: 2rem;
+          letter-spacing: 1px;
+          margin-top: -18px;
+
+          @media screen and (max-width:400px) {
+           font-size: 1.8rem; 
+          }
+        }
+
+        .form-inputs {
+          width: 80%;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 33% 34% 33%;
+          grid-template-rows: 1fr 1fr;
+          align-items: center;
+          justify-content: center;
+          gap: 25px;
+
+          @media screen and (max-width:1190px) {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-items: center;
+          }
+
+          @media screen and (max-width:550px) {
+            grid-template-columns: 1fr;
+          }
+
+          select,
+          input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $grey1;
+            padding: 10px 0;
+            cursor: pointer;
+
+            @media screen and (max-width:1190px) {
+              width: 100%;
+            }
+          }
+        }
+
+        button {
+          margin-top: 50px;
+          background: $black1;
+          color: $white1;
+          letter-spacing: 3px;
+          padding: 15px 25px;
+          border-radius: 35px;
+          font-family: $font2;
+          cursor: pointer;
+
+          &:active {
+            color: $orange1;
+          }
+
+          @media screen and (max-width:1190px) {
+            margin: 25px 0;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+}

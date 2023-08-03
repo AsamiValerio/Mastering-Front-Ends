@@ -1,0 +1,53 @@
+.quote {
+  position: relative;
+  margin: 60px 0 200px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: url(/assets/img/gmap.jpg) center/cover;
+    width: 100%;
+    height: 320px;
+    @include centerX;
+    z-index: -1;
+    bottom: -200px;
+  }
+
+  .quote-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: $white1;
+    position: relative;
+    padding-top: 25px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(/assets/img/avatar-02.jpg) center/cover;
+      height: 72px;
+      width: 72px;
+      border-radius: 4rem;
+      @include centerX;
+      top: -30px;
+    }
+
+
+    .text-container {
+      padding: 50px;
+      line-height: 33px;
+    }
+
+    h2 {
+      font-family: $font3;
+      font-weight: 400;
+      color: $black1;
+      margin-top: -25px;
+    }
+
+    p {
+      padding: 20px 0 50px;
+      color: $orange1;
+    }
+  }
+}

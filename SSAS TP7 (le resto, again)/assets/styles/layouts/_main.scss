@@ -1,0 +1,59 @@
+main {
+  @include grid50;
+  background: $white1;
+
+  @media screen and (max-width:830px) {
+    grid-template-columns: 100%;
+  }
+
+  .intro-text {
+    background: $white1;
+    padding: 20px;
+    margin: 20px;
+    border: 1px dashed $orange1;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    h3 {
+      color: $black1;
+      margin-top: -12px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 20px;
+    }
+
+    img {
+      border-radius: 4rem;
+      width: 80px;
+      height: 80px;
+      margin: 20px auto;
+    }
+
+    h4 {
+      letter-spacing: 1px;
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: $font2;
+    }
+
+    h5 {
+      color: $grey1;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .intro-pic {
+    background: url(/assets/img/store-01.jpg) center/cover;
+
+    @media screen and (max-width:830px) {
+      display: none;
+    }
+  }
+}
