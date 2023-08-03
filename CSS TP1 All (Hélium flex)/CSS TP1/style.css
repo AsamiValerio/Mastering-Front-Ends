@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:wght@500&display=swap');
+
+:root {
+  --color1: rgb(240, 236, 236);
+  --color2: rgb(49, 48, 48);
+  --color3: rgb(93, 93, 230);
+  --color4: rgb(29, 28, 28);
+}
+* {
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+li {
+  list-style: none;
+}
+p {
+  font-size: 0.8rem;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--color2);
+  color: var(--color1);
+}
+nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  padding: 10px 20px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 30px auto;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+h1 {
+  font-size: 5rem;
+}
+.header-left-container {
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  color: var(--color3);
+  font-size: 1.8rem;
+}
+.header-right {
+  width: 100%;
+  margin: 0 auto;
+}
+.infos {
+  display: flex;
+  background: var(--color4);
+  border-radius: 10px;
+}
+.infos-left {
+}
+h4 {
+  padding-bottom: 10px;
+}
+.btn-container {
+}
+button {
+  cursor: pointer;
+  margin: 10px 20px 10px 0px;
+  border: none;
+  background: var(--color3);
+  color: var(--color1);
+  border-radius: 10px;
+  padding: 10px 0px;
+  width: 150px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.infos-right {
+  display: grid;
+}
+.investors {
+}
+.img-container {
+  display: flex;
+  justify-content: space-between;
+}
+.img-container img {
+  height: 50px;
+  margin: 0px 80px;
+}

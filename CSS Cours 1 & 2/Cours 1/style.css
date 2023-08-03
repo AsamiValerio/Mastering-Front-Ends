@@ -1,0 +1,231 @@
+/* Coller le @import url le plus haut possible (sans les <style>) /!\ solution va vite et non pro /!\ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+/* Police téléchargée, src: url => .. retour arrière dossier, ./ avancer dans dossier (aller chercher l'emplacement de la police) */
+@font-face {
+    font-family: "Raleway";
+    src: url(./assets/fonts/Raleway-Bold.ttf);
+}
+
+/* "*"L'étoile donne du style à TOUS les éléments */
+/* Souvent à faire au début pour un travail plus précis */
+/* * {
+    margin: 0;
+    padding: 0;
+    Astuce pour affichier toutes les bordures facilement (alternative F12).
+    border: 2px solid red;  
+} */
+ 
+/* Police appliquée par défaut sur tout les textes MAIS font-family de h1,h2,etc (enfant) sont prioritaire. */
+body {
+    font-family: "Raleway", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* center/cover fonctionne 90% du temps */
+    background: url(./assets/img/bg.jpg) center/cover;
+    /* VH (Viewport Height) = 100% de la taille de l'écran */
+    /* Le "min" empêche le bg d'overlap le texte des prochaines sections */
+    /* min-height: 100vh; */
+}
+
+h1 {
+    text-transform: uppercase; 
+    letter-spacing: 3px;
+    text-align: center;
+    /* Taille de la police en "REM" */
+    /* 1 REM = 16 pixels */
+    font-size: 3.5rem;
+    /* vw (Viewport Width) va adapter la taille par rapport à la taille de l'écran (responsive bis). */
+    /* font-size: 8vw; */
+    /* (xPX, xPX, xPX, Black) Ombres à inspecter et régler dans navigateur puis coller ici.  */
+    text-shadow: 3px 3px 8px #0000007d;
+    /* Possibilités : red, RGB, #000000XX pour modifier couleurs */
+    color: #bab6e4e3;
+    text-decoration: underline;
+    /* Aller sur Google Fonts puis DL ou Import+CSS rules pour changer la police */
+    font-family: "Raleway", 'Roboto Mono', monospace;
+}
+
+/* S'applique sur Main du fichier HTML */
+main {
+    min-height: 500px;
+    width: 90%;
+    background: rgba(136, 163, 204, 0.747);
+    /* Centrer une boite */
+    /* 0 fait référence au haut et au bas, auto va égaliser à gauche et à droite. */
+    margin: 0 auto;
+    border: 2px solid green;
+    /* Border-radius avec une seule valeur change toutes les bordures */
+    /* Border-radius avec 4 valeurs va modifier dans le sens des aiguilles d'une montre */
+    border-radius: 20px 20px 0 100px;
+    box-shadow: 0 0 9px 3px #459b64;
+    padding: 15px;
+}
+
+/* H2 représente "flexbox", indiquer margin 0 retire la bordure de base. */
+/* Pas besoin de faire ça si * (étoile) appliquée au début. */
+h2 {
+    margin: 0;
+}
+
+/* "."laclasse, touche tous les éléments de la classe du même nom */
+.flexbox, 
+.grid {
+    border: 2px solid green;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 10px 215px 10px;
+    margin-top: 15px;
+    min-height: 150px;
+}
+.absolute {
+    border: 2px solid green;
+    border-radius: 5px 5px 5px 80px;
+    padding: 10px 10px 215px 10px;
+    margin-top: 15px;
+    min-height: 150px;
+}
+
+/* FLEXBOX */
+/* Sert à répartir équitablement des éléments sur la page. */
+.flexbox ul {
+    padding: 0px;
+/* Insepecter la console puis voir possibilités dans ul, display: flex et clic icone. */
+    display: flex;
+/* Space-around : les boites seront toujours bien centrées sur la page. */
+    justify-content: space-around;
+}
+
+.flexbox li {
+/* list-style: none, retire les points et les numéros.    */
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: #459b64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRID */
+.grid-container{
+    /* Affiche la grille dans F12 => div class="grid-container" => clique sur "grid" */
+    display: grid;
+    /* Chaque %tage s'applique sur les enfants, l'un à la suite de l'autre. */
+    /* Le 30% s'applique sur le logo, le 70% sur le formulaire. */
+    grid-template-columns: 30% 70%;
+}
+.grid img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+
+form {
+    display: grid;
+    /* Nombre de colonnes dans le formulaire. */
+    grid-template-columns: 1fr 1fr;
+    /* fr = fraction (taille) */
+    /* Nombre de rangées dans le formulaire. */
+    grid-template-rows: 1fr 1fr 1fr;
+    /* GT-areas permet de "dessiner" le tableau, i représente "input", ta "text-area", vi "vide" et bt "bouton". */
+    /* Dans cet exemple, la case en bas à gauche du tableau du formulaire sera vide. */
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+
+input, textarea {
+    margin: 5px;
+    border: 1.5px solid green;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: "Raleway";
+    border-radius: 7px;
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+/* Le # se réfère à l'id (dans HTML) pour savoir ou positionner le bouton "valider". */
+/* "#" fait référence aux id. */
+#bt-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: #54916a85;
+    /* "Transition" influe sur "hover" mais il vaut mieux le placer sur l'élément principal (#bt-submit). */
+    transition: 0.3s;
+}
+
+/* "Hover" applique des effets au survole de la souris, hover fonctionne sur quasiment tout. */
+#bt-submit:hover {
+    background: #459b65d2;
+    color: rgba(255, 255, 255, 0.63);
+}
+
+/* ABSOLUTE */
+.absolute {
+    /* "Pos: Relative va toujours placer les éléments enfants (ex: circle1) dans leurs parents (ex: absolute). */
+    /* Sans la relative, les éléments en absolute se positionneront par rapport au body. */
+    position: relative;
+}
+
+#circle1 {
+    height: 80px;
+    width: 80px;
+    background: #346847d3;
+    position:absolute;
+    border-radius: 150px;
+    top: 0;
+    right: 0;
+}
+
+#circle2 {
+    height: 40px;
+    width: 40px;
+    background: #459b64;
+    position: absolute;
+    border-radius: 150px;
+    /* Left 50% pour tenter de centrer le cercle, mais il n'est pas parfaitement centré. */
+    left: 50%;
+    /* Transform:translate(X:Horizontale et Y:Verticale) permet de retirer X% de la taille propre de l'élément uniquement. */
+    transform: translateX(-50%);
+    top: 180px;
+}
+
+/* RESPONSIVE */
+/* @media screen and max-width permet d'appliquer des effets lorsque la page passe EN DESSOUS de 815px. */
+/* On met 815px dans cet exemple car c'est à partir de 815px que le formulaire commence à passer à travers la grid. */
+@media screen and (max-width: 815px) {
+    /* background + une couleur, permet de tester la media query (adaptation de la page à l'écran de l'utilisateur) */
+    /* body {
+        background: red;
+    } */
+    .grid-container {
+        display: block;
+    }
+    .grid-container img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .flexbox ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "i1"
+        "i2"
+        "ta"
+        "bt";
+    }
+    input,textarea {
+        font-size: 0.8rem;
+    }
+}
