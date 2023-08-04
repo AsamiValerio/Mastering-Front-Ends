@@ -8,3 +8,5 @@ Dans mes branches, ce sont les cours sur JavaScript que j'ai trouvé sur Youtube
 Tous les cours JavaScript que je suis en ce moment sont inachevés.
 
 Bonne visite :)
+
+Afoumou Lorenzo
